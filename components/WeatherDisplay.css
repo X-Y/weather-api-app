@@ -1,0 +1,31 @@
+.container {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  >h2, >h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  .error {
+      color: red;
+      font-weight: bold;
+  }
+}
+        ul, p, div {
+    font-size: 16px;
+    color: #666;
+  }
+  ul, div {
+    margin: 10px 0 0;
+    padding: 0;
+  }
+  ul>li, div {
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+  }

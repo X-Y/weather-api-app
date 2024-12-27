@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather Dashboard</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="app">
+            <h1>Weather Dashboard</h1>
+
+            <!-- Search City -->
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name"
+                />
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <!-- Weather Information Component -->
+            <weather-info></weather-info>
+
+            <!-- Favorite Cities -->
+            <div class="favorite-container">
+                <h3>Favorite Cities</h3>
+                <ul id="favoriteCities"></ul>
+            </div>
+
+            <!-- Preset City Buttons -->
+            <div class="preset-buttons">
+                <button class="city-btn" data-city="New York">New York</button>
+                <button class="city-btn" data-city="London">London</button>
+                <button class="city-btn" data-city="Tokyo">Tokyo</button>
+                <button class="city-btn" data-city="Sydney">Sydney</button>
+                <button class="city-btn" data-city="Paris">Paris</button>
+            </div>
+
+            <!-- Historical Weather Data Component -->
+            <historical-weather></historical-weather>
+
+            <!-- Historical Weather Data Component -->
+            <humidity-display></humidity-display>
+
+            <!-- Settings Page Link -->
+            <div>
+                <button id="settingsBtn">Settings</button>
+            </div>
+
+            <!-- 7-Day Forecast Component -->
+            <weather-forecast></weather-forecast>
+        </div>
+
+        <!-- Settings Modal -->
+        <div id="settingsModal" class="modal" hidden>
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Settings</h2>
+                <label for="units">Temperature Units:</label>
+                <select id="units">
+                    <option value="metric">Celsius</option>
+                    <option value="imperial">Fahrenheit</option>
+                </select>
+                <button id="saveSettingsBtn">Save</button>
+            </div>
+        </div>
+
+        <script src="app.js" type="module"></script>
+    </body>
+</html>
